@@ -144,7 +144,7 @@ NOTE: do not forget add Authorization and DeviceId in header
 ```
 **6.To start user season call start menu call it when user come to app (on app resumed) :**
 
-POST `/api/League/Start`
+POST `/api/League/Verify`
 
 Params:
 ```json
