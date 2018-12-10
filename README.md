@@ -10,7 +10,7 @@ http://79.175.155.143/Dorsabazar/api/
 POST `/register/RegisterRequest`
 
 sample :
-http://.../api/register/RegisterRequest/0912***1234
+http://.../api/register/RegisterRequest?mobileNumber=0912***1234
 
 response:
 ```json
@@ -67,7 +67,7 @@ sample :
 
 **3.Get user profile information by call get method :**
 `
-/register/GetProfile/mobile=""
+/register/GetProfile?mobile=""
 `
 **moble is user's phone number which is submited in step 1**
 **NOTE: do not forget add Authorization in header**
