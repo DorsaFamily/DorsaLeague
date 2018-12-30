@@ -5,8 +5,11 @@ To register or login do steps bellow :
 Base url is :
 http://79.175.155.143/Dorsabazar/api/
 
-**Post user phone number by** 
 
+------------
+
+
+- **Post user phone number by** 
 POST `/register/RegisterRequest`
 
 sample :
@@ -28,7 +31,11 @@ response:
 }
 ```
 
-2.**Send verify code** and** get jwt** if phone number and sms key was currect by POST json params to `/register/VerifyCode`
+------------
+
+
+- **Send verify code** and** get jwt** if phone number and sms key was currect
+POST json params to `/register/VerifyCode`
 
 **Params :**
 ```json
@@ -59,21 +66,27 @@ response:
 ```
 which extra is jwt , used to add  Authorization in header to get or set user profile and othe api that contains user's information
 
-**NOTE: add DeviceId in header too.**
+**NOTE : add DeviceId in header too.**
 
 sample :
 `Authorization: Bearer [jwt]`
 `DeviceId: [deviceId]`
 
-**3.Get user profile information by call get method :**
-`
-/register/GetProfile?mobile=""
-`
-**moble is user's phone number which is submited in step 1**
-**NOTE: do not forget add Authorization in header**
 
-**4.If user profile was null you have to complete user information by below api 
-**
+------------
+
+
+- **Get user profile information by call get method :**
+GET  `/register/GetProfile?mobile=""`
+
+NOTE : Moble is user's phone number
+NOTE : Do not forget add Authorization in header
+
+
+------------
+
+
+- **If user profile was null you have to complete user information by below api **
 POST `/register/SetProfile`
 
 **Params :**
@@ -108,7 +121,10 @@ NOTE: do not forget add Authorization and DeviceId in header
 }
 ```
 
-**5. To edit user information :**
+------------
+
+
+- **To edit user information :**
 PUT `/register/UpdateProfile`
 
 Params :
@@ -142,9 +158,12 @@ NOTE: do not forget add Authorization and DeviceId in header
   }
 }
 ```
-**6.To start user season call start menu call it when user come to app (on app resumed) :**
 
-POST `/api/League/Verify`
+------------
+
+
+- **To start user season call start menu call it when user come to app (on app resumed) :**
+POST `/api/League/Start`
 
 Params:
 ```json
@@ -181,8 +200,10 @@ Response:
 ```
 NOTE: allowedTime is long thas show how log user can be in app (in minutes)
 
-**7.End user season by calling bellow api when user leave app (on pause app).**
+------------
 
+
+- **End user season by calling bellow api when user leave app (on pause app).**
 POST `/League/End`
 
 Params:
