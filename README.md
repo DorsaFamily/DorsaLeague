@@ -36,6 +36,7 @@ response:
 
 
 - **Send verify code** and** get jwt** if phone number and sms key was currect
+
 POST json params to `/register/VerifyCode`
 
 **Params :**
@@ -78,6 +79,7 @@ sample :
 
 
 - **Get user profile information by call get method :**
+
 GET  `/register/GetProfile?mobile=""`
 
 NOTE : Moble is user's phone number
@@ -164,6 +166,7 @@ NOTE: do not forget add Authorization and DeviceId in header
 
 
 - **To start user season call start menu call it when user come to app (on app resumed) :**
+
 POST `/api/League/Start`
 
 Params:
@@ -205,6 +208,7 @@ NOTE: allowedTime is long thas show how log user can be in app (in minutes)
 
 
 - **End user season by calling bellow api when user leave app (on pause app).**
+
 POST `/League/End`
 
 Params:
