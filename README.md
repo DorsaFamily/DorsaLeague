@@ -235,3 +235,115 @@ Response:
   "extra": true
 }
 ```
+
+------------
+
+- **Add point to user.**
+
+POST `/League/Point`
+
+Params:
+```json
+{
+  "mobileNumber": "string",
+  "packageName": "string",
+  "point": 0
+}
+```
+NOTE: do not forget add Authorization and DeviceId in header
+
+
+Response:
+```json
+{
+  "ok": true,
+  "messages": [
+    {
+      "code": 0,
+      "description": "string"
+    }
+  ],
+  "extra": {
+    "user": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string",
+      "imageUrl": "string",
+      "phoneNumber": "string",
+      "age": 0,
+      "gender": 0,
+      "cityId": 0
+    },
+    "totalPoint": 0
+  }
+}
+```
+
+------------
+
+- **Get user points.**
+
+GET `League/Point?mobileNumber=09**********&packageName`
+
+NOTE: do not forget add Authorization and DeviceId in header
+
+
+Response:
+```json
+{
+  "ok": true,
+  "messages": [
+    {
+      "code": 0,
+      "description": "string"
+    }
+  ],
+  "extra": {
+    "user": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string",
+      "imageUrl": "string",
+      "phoneNumber": "string",
+      "age": 0,
+      "gender": 0,
+      "cityId": 0
+    },
+    "totalPoint": 0
+  }
+}
+```
+
+------------
+
+- **Get App or game leader board.**
+
+GET `League/UserPoints?packageName=com.example.example`
+
+NOTE: do not forget add Authorization and DeviceId in header
+
+
+Response:
+```json
+{
+  "ok": true,
+  "messages": [
+    {
+      "code": 0,
+      "description": "string"
+    }
+  ],
+  "extra": {
+    "count": 0,
+    "users": [
+      {
+        "firstName": "string",
+        "lastName": "string",
+        "email": "string",
+        "imageUrl": "string",
+        "totalPoint": 0
+      }
+    ]
+  }
+}
+```
